@@ -65,6 +65,16 @@ ul {
     width: 3.25rem;
     height: 1.89rem;
 }
+
+.menu-desktop {
+    display: none;
+}
+.header-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
 #toggleTheme {
     cursor: pointer;
     color: var(--cor-icone);
@@ -88,5 +98,16 @@ ul {
     align-items: center;
 }
 
+/* Medidas Responsivas */
 
+@media (min-width: 768px) { /* resolução de 768 para cima */
 
+    .menu-desktop {
+        display: flex;
+        min-width: 32%;
+    }
+    .header-toggle {
+        min-width: 32%;
+    }
+
+}
