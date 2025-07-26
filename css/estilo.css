@@ -1,20 +1,47 @@
 /*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
 
+/*Definição do thema Dark*/
+:root,
+:root[data-theme="dark"] {
+    --cor-fundo: #111217;
+    --cor-texto: #cccccc;
+    --cor-icone: #ffc504;
+    --cor-link: #FFFFFF;
+    --cor-hover: #000000;
+    --cor-menu: #666666;
+    --cor-borda: #e9e9e9;
+
+}
+:root[data-theme="light"] {
+    --cor-fundo: #e9e9e9;
+    --cor-texto: #111217;
+    --cor-icone: #333333;
+    --cor-link: #FFFFFF;
+    --cor-hover: #f0f0f0;
+    --cor-menu: #c3c3c3;
+    --cor-borda: #333333;
+}
+/*Definição do thema Light*/
+
 *{
 margin: 0px;
 padding: 0px;
+box-sizing: border-box;
 }
 
 body {
-    background: #111217;
-    color: #f0f0f0;
-    font-family: ;
-
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    /*font-family: ;*/
 }
 
 a {
     text-decoration: none;
-    color: #f0f0f0;
+    color: var(--cor-texto);
+}
+
+ul {
+    list-style: none;
 }
 
 #header {
@@ -23,11 +50,37 @@ a {
     justify-content: space-between; /* espaço "entre" espaços ele se torna justificado*/
     align-items: center;
     width: 100%;
-    background: #333;
-    padding: 0.5rem 1rem;
+    background: var(--cor-menu);
+    padding: 0.5rem 1rem; /*rem é baseado no tamanho da fonte do elemento raiz do documento (normalmente 16px). */
+    /*z-index: ;
+    position: ;*/
+    border-bottom: 1px solid var(--cor-borda);
+    /*background: ;*/
 
 }
-/*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
-.menu-desktop {}
 
-.menu-mobile {}
+#toggleTheme {
+    cursor: pointer;
+    color: var(--cor-icone);
+    font-size: 1.2rem;
+}
+.menu-link.active .menu-texto, 
+.menu-link:hover .menu-texto {
+    color: var(--cor-hover);
+    
+}
+
+.menu-texto {
+    color: var(--cor-texto);
+    text-transform: uppercase;
+}
+/*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
+
+.menu {
+    display: flex;
+    gap: 1rem; /*espaço automático entre os contaners/elementos*/
+    align-items: center;
+}
+
+
+
