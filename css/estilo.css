@@ -1,4 +1,33 @@
+/*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
+
 *{
 margin: 0px;
 padding: 0px;
 }
+
+body {
+    background: #111217;
+    color: #f0f0f0;
+    font-family: ;
+
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+#header {
+    display: flex; /*Usada para criar projetos Mobile - esse container é responsivo*/
+    flex-wrap: row wrap; /*Serve para quebrar a linha automaticamente preservando o menu na horizontal*/
+    justify-content: space-between; /* espaço "entre" espaços ele se torna justificado*/
+    align-items: center;
+    width: 100%;
+    background: #333;
+    padding: 0.5rem 1rem;
+
+}
+/*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
+.menu-desktop {}
+
+.menu-mobile {}
