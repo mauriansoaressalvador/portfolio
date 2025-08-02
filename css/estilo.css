@@ -5,23 +5,28 @@
 :root,
 :root[data-theme="dark"] {
     --cor-fundo: #1b1b1b;
+    --cor-fundo-secundaria: #9c9c9c;
     --cor-texto: #cccccc;
     --cor-icone: #ffc504;
     --cor-link: #FFFFFF;
     --cor-hover: #000000;
     --cor-menu: #666666;
     --cor-borda: #e9e9e9;
+    --cor-menu-mobile: #ffffff;
+  
 
 }
 /*Definição do thema Light*/
 :root[data-theme="light"] {
-    --cor-fundo: #c0c0c0;
+    --cor-fundo: #f0f0f0;
+    --cor-fundo-secundaria: #888888;
     --cor-texto: #111217;
     --cor-icone: #333333;
     --cor-link: #FFFFFF;
     --cor-hover: #f0f0f0;
     --cor-menu: #c3c3c3;
     --cor-borda: #333333;
+    --cor-menu-mobile: #000000;
 }
 html[data-theme="light"] .logo{
     filter: invert(1);
@@ -58,10 +63,10 @@ ul {
     width: 100%;
     background: var(--cor-menu);
     padding: 0.5rem 1rem; /*rem é baseado no tamanho da fonte do elemento raiz do documento (normalmente 16px). */
-    /*z-index: ;
-    position: ;*/
+    z-index: 100;
+    position: fixed;
     border-bottom: 1px solid var(--cor-borda);
-    /*background: ;*/
+    background: var(--cor-menu);
 
 }
 .logo {
@@ -86,6 +91,56 @@ ul {
 
 #menuMobile {
     margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+    background: transparent;
+    color: var(--cor-menu-mobile);
+    border: none;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Menu mobile - Estilo e Animação */
+
+.menu-mobile { /* Nav */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--cor-fundo-secundaria);
+    z-index: 50;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column; /* Voltar*/
+    padding-top: 4rem;
+    border-left: 1px solid var(--cor-borda);
+    height: 100vh; /* VH viewport height substitui %*/
+    width: 75vw; /* VW viewport width substitui %*/
+    transition: transform 1s ease-in-out; /*transição menu*/
+}
+
+.menu-mobile.active {
+    transform: translateX(0);/*transição menu*/
+}
+
+.menu-mobile .menu-lista {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding:  1rem 1rem 2rem;
+}
+
+.menu-mobile .menu-link {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    
 }
 
 .menu-link.active .menu-texto, 
@@ -120,5 +175,9 @@ ul {
     .header-toggle {
         min-width: 32%;
     }
+    .btn-menu-mobile {
+        display: none;
+    }
 
 }
+
