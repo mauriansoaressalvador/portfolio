@@ -13,8 +13,8 @@
     --cor-menu: #666666;
     --cor-borda: #e9e9e9;
     --cor-menu-mobile: #ffffff;
-  
-
+    --cor-menu-icon: #5296e4;
+    --cor-menu-icon-hover: #2b4d74;
 }
 /*Definição do thema Light*/
 :root[data-theme="light"] {
@@ -27,6 +27,8 @@
     --cor-menu: #c3c3c3;
     --cor-borda: #333333;
     --cor-menu-mobile: #000000;
+    --cor-menu-icon: #5296e4;
+    --cor-menu-icon-hover: #2b4d74;
 }
 html[data-theme="light"] .logo{
     filter: invert(1);
@@ -145,7 +147,8 @@ ul {
 }
 
 .menu-link.active .menu-texto, 
-.menu-link:hover .menu-texto {
+.menu-link:hover .menu-texto,
+ {
     color: var(--cor-hover);
     
 }
@@ -155,6 +158,21 @@ ul {
     text-transform: uppercase;
     font-size: 0.75rem ; /* Tamanho da Fonte*/
     font-weight: 600;
+}
+
+/*.menu-link.active .social-icon,*/
+.menu-link:hover .social-icon  {
+
+    color: var(--cor-menu-icon-hover);
+    transition: all 0.3s ease-out;
+    
+}
+
+
+.social-icon {
+    color: var(--cor-menu-icon);
+    transition: all 0.3s ease-out;
+
 }
 /*\\\\\\\\\\\\\\\\\ESTILOS AVANÇADOS\\\\\\\\\\\\\\\\\*/
 
@@ -182,7 +200,16 @@ ul {
 
     #home {
         padding-top: 6rem; 
+        transition: all 1s ease-out;
         
     }
 }
 
+@media (max-width: 767px) { /* resolução de 767 para baixo */
+
+      #home {
+        padding-top: 6rem; 
+        transition: all 1s ease-out;
+        
+    }
+}
