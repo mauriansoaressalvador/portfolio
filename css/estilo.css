@@ -339,6 +339,10 @@ p {
   letter-spacing: normal;
 }
 
+.projetos-container {
+  border: 1rem solid var(--cor-borda);
+}
+
 /* Medidas Responsivas */
 /* Até 768px - Mobile */
 /* Medidas Responsivas */
