@@ -462,7 +462,7 @@ p {
   text-align: center;
 }
 .sobre-content1,
-.sobre-content1 {
+.sobre-content2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -519,10 +519,10 @@ p {
 }
 
 .sobre-content2 .col1 .row1,
-.sobre-content2 .col2 .row2 {
+.sobre-content2 .col1 .row2 {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 0.5rem;
 }
 /* Medidas Responsivas */
 /* Até 768px - Mobile */
@@ -591,7 +591,7 @@ p {
   /* GRID BOX */
 
   .sobre-content1,
-  .sobre-content1 {
+  .sobre-content2 {
     display: grid;
     grid-template-columns: 34% 60%;
     justify-content: flex-start;
