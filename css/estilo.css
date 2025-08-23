@@ -463,9 +463,10 @@ p {
 }
 .sobre-content1,
 .sobre-content2 {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 .sobre-logo {
@@ -524,6 +525,67 @@ p {
   flex-direction: column;
   gap: 0.5rem;
 }
+/*Accordion FAQ*/
+.accordion {
+  display: inline-block;
+  width: 100%;
+}
+.accordion-header {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  text-align: start;
+  border: 1px solid var(--cor-borda);
+  color: var(--btn-titulo);
+  cursor: pointer;
+}
+
+.accordion-body {
+  display: none;
+  padding: 1.25rem;
+  color: var(--cor-titulo);
+  border: 1px solid var(--cor-borda);
+  gap: 0.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.accordion-item.active .accordion-body {
+  display: flex;
+}
+
+.bi-caret-down-fill {
+  /*animação inversa*/
+  transition: all 0.3s ease-out;
+}
+.accordion-item.active .bi-caret-down-fill {
+  /*animação fechando*/
+  transform: rotate(180deg);
+  transition: all 0.3s ease-out;
+}
+.accordion-header {
+  font-weight: 400;
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  transition: all 1s ease-out;
+}
+.accordion-header:hover {
+  background: var(--cor-menu);
+  transition: all 0.5s ease-out;
+}
+.accordion-item.active .accordion-header {
+  background: var(--cor-menu);
+  transition: all 0.5s ease-out;
+}
+
+.accordion-item {
+  width: 100%;
+  display: inline-block;
+}
+
 /* Medidas Responsivas */
 /* Até 768px - Mobile */
 /* Medidas Responsivas */
