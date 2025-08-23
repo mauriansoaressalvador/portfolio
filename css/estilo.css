@@ -456,6 +456,11 @@ p {
   gap: 1.5rem;
   scroll-margin-top: 2.5rem;
 }
+
+.sobre h2 {
+  /*text-align: start;*/
+  text-align: center;
+}
 .sobre-content1,
 .sobre-content1 {
   display: flex;
@@ -466,7 +471,58 @@ p {
 .sobre-logo {
   /*Imagem Avatar*/
   width: 100%;
+  /* max-width: 700px;*/
   border-radius: 50rem;
+  border: 0.5rem double var(--cor-menu-icon);
+  /*border: 6px solid var(--cor-menu-icon);*/
+  pointer-events: none;
+}
+.sobre-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.sobre-description p {
+  color: var(--cor-titulo);
+  font-size: 1.4rem;
+}
+
+.sobre-icones {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.sobre-icones i {
+  font-size: 1.25rem;
+  color: var(--cor-icone);
+  transition: all 1s ease-out;
+}
+
+.sobre-icones i:hover {
+  font-size: 1.25rem;
+  filter: brightness(50%);
+  transition: all 1s ease-out;
+}
+
+.sobre-icones span {
+  font-family: var(--fonte-corpo);
+}
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 0.5rem;
+}
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col2 .row2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 /* Medidas Responsivas */
 /* Até 768px - Mobile */
@@ -528,6 +584,21 @@ p {
     flex-direction: row;
   }
 
+  .sobre {
+    gap: 5rem;
+  }
+
+  /* GRID BOX */
+
+  .sobre-content1,
+  .sobre-content1 {
+    display: grid;
+    grid-template-columns: 34% 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
   .card-cover {
     width: 55%;
   }
@@ -539,6 +610,10 @@ p {
 
   .projetos h2 {
     padding-bottom: 5rem;
+  }
+  .card-button .btn,
+  .description-button .btn {
+    width: auto;
   }
 }
 
