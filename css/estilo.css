@@ -714,6 +714,35 @@ footer i:hover {
 .footer-link:hover {
   color: var(--cor-texto);
 }
+/*Voltar para o Topo*/
+
+#btn-topo {
+  position: fixed;
+  z-index: 99;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: var(--cor-menu-icon);
+  cursor: pointer;
+  display: flex;
+  border-radius: 10%;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+  display: ;
+}
+
+#btn-topo i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+#btn-topo:hover {
+  background: var(--cor-menu-icon-hover);
+}
+
 /* Medidas Responsivas */
 /* Até 768px - Mobile */
 /* Medidas Responsivas */
