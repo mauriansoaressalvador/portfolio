@@ -153,7 +153,7 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 0.8rem;
+  padding: 1rem 0.6rem;
   z-index: 100;
   position: fixed;
   border-bottom: 1px solid var(--cor-borda);
@@ -768,7 +768,7 @@ footer i:hover {
 @media (min-width: 768px) {
   /* A partir de 768px ate o infinito */
   #header {
-    padding: 1rem 0.8rem;
+    padding: 1rem 0.6rem;
   }
 
   .menu-desktop {
